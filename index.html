@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoTube · Descarga videos y música en Android</title>
+    <meta name="description" content="App gratuita y de código abierto para Android: descarga videos y música de YouTube, TikTok, Instagram, X y Facebook. Sin anuncios y sin registro.">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Vista previa al compartir el enlace en WhatsApp, X, etc. -->
+    <meta property="og:title" content="ExoTube · Descarga videos y música en Android">
+    <meta property="og:description" content="Comparte un enlace desde tus redes y elige la calidad. Sin anuncios, sin registro y de código abierto.">
+    <meta property="og:image" content="img/portada.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header class="cabecera" id="inicio">
+    <div class="contenedor cabecera__fila">
+        <a class="logo" href="#inicio" aria-label="ExoTube, inicio">
+            <img src="img/logo.svg" alt="" width="32" height="32">
+            <span>Exo<span class="verde">Tube</span></span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Principal">
+            <a href="#caracteristicas">Características</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#descargar">Descargar</a>
+            <a href="#preguntas">Preguntas</a>
+        </nav>
+
+        <a class="boton boton--pequeno" href="#descargar">Descargar</a>
+
+        <button class="menu-boton" id="menu-boton" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <!-- PORTADA -->
+    <section class="portada">
+        <div class="contenedor portada__rejilla">
+            <div class="portada__texto">
+                <p class="etiqueta">Android · Código abierto</p>
+                <h1>Descarga videos y música de tus redes favoritas</h1>
+                <p class="parrafo-grande">
+                    Comparte un enlace desde YouTube, TikTok, Instagram, X o Facebook,
+                    elige la calidad y listo. Sin anuncios, sin registro y sin límites.
+                </p>
+
+                <div class="portada__botones">
+                    <a class="boton" href="#descargar">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Descargar APK
+                    </a>
+                    <a class="boton boton--fantasma" href="#como-funciona">Cómo funciona</a>
+                </div>
+
+                <p class="nota">Android 8.0 o superior · <span id="peso-apk">67 MB</span> · Gratis</p>
+
+                <ul class="insignias">
+                    <li>Sin anuncios</li>
+                    <li>Sin registro</li>
+                    <li>Código abierto</li>
+                    <li>Reproductor incluido</li>
+                </ul>
+            </div>
+
+            <div class="portada__imagen revelar">
+                <img src="img/portada.jpg" alt="Dos pantallas de ExoTube: el detalle de una playlist y el reproductor en marcha" width="760" height="950">
+            </div>
+        </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section class="seccion" id="caracteristicas">
+        <div class="contenedor">
+            <h2>Todo lo que necesitas</h2>
+            <p class="seccion__intro">Una sola app para descargar, guardar y escuchar.</p>
+
+            <ul class="tarjetas">
+                <li class="tarjeta revelar">
+                    <span class="tarjeta__icono">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+                    </span>
+                    <h3>Desde el botón Compartir</h3>
+                    <p>No hace falta copiar enlaces. Toca "Compartir" en cualquier app y elige ExoTube.</p>
+                </li>
+
+                <li class="tarjeta revelar">
+                    <span class="tarjeta__icono">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+                    </span>
+                    <h3>Tú eliges la calidad</h3>
+                    <p>Desde 360p hasta 4K, con el peso de cada opción antes de descargar.</p>
+                </li>
+
+                <li class="tarjeta revelar">
+                    <span class="tarjeta__icono">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                    </span>
+                    <h3>Solo el audio en MP3</h3>
+                    <p>Convierte cualquier video en música para escucharlo sin gastar datos.</p>
+                </li>
+
+                <li class="tarjeta revelar">
+                    <span class="tarjeta__icono">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                    </span>
+                    <h3>Reproductor integrado</h3>
+                    <p>Escucha con la pantalla apagada, con controles en la notificación.</p>
+                </li>
+
+                <li class="tarjeta revelar">
+                    <span class="tarjeta__icono">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>
+                    </span>
+                    <h3>Tus playlists</h3>
+                    <p>Agrupa tus canciones favoritas y ponles la foto que quieras.</p>
+                </li>
+
+                <li class="tarjeta revelar">
+                    <span class="tarjeta__icono">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                    </span>
+                    <h3>Descarga en segundo plano</h3>
+                    <p>Sigue usando el teléfono: verás el avance en la notificación y podrás cancelar.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="seccion seccion--alterna" id="como-funciona">
+        <div class="contenedor">
+            <h2>En tres pasos</h2>
+            <ol class="pasos">
+                <li class="revelar">
+                    <span class="pasos__numero">1</span>
+                    <h3>Comparte el enlace</h3>
+                    <p>En YouTube, TikTok, Instagram, X o Facebook, toca "Compartir" y elige ExoTube.</p>
+                </li>
+                <li class="revelar">
+                    <span class="pasos__numero">2</span>
+                    <h3>Elige el formato</h3>
+                    <p>Aparece una ventana con las calidades de video y la opción de solo audio.</p>
+                </li>
+                <li class="revelar">
+                    <span class="pasos__numero">3</span>
+                    <h3>Disfrútalo</h3>
+                    <p>El archivo queda en tu galería o tu música, listo para verlo sin conexión.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- DESCARGA -->
+    <section class="seccion" id="descargar">
+        <div class="contenedor">
+            <h2>Descarga ExoTube</h2>
+            <p class="seccion__intro">Instalación directa. No está en Google Play porque sus normas no permiten apps que descargan de estas plataformas.</p>
+
+            <div class="descarga">
+                <div class="descarga__principal">
+                    <img src="img/logo.svg" alt="" width="64" height="64">
+                    <div>
+                        <p class="descarga__nombre">ExoTube <span id="version">1.0</span></p>
+                        <p class="descarga__datos">Para la mayoría de teléfonos (ARM64) · <span id="peso-principal">67 MB</span></p>
+                    </div>
+                    <a class="boton boton--grande" id="boton-descarga" href="descargas/ExoTube-1.0-arm64-v8a.apk" download>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Descargar APK
+                    </a>
+                </div>
+
+                <details class="otras">
+                    <summary>¿Tu teléfono es antiguo o es un emulador?</summary>
+                    <ul>
+                        <li><a href="descargas/ExoTube-1.0-armeabi-v7a.apk" download>ExoTube para ARM de 32 bits (armeabi-v7a)</a> — teléfonos anteriores a 2017 · 61 MB.</li>
+                        <li><a href="descargas/ExoTube-1.0-x86_64.apk" download>ExoTube para x86_64</a> — emuladores y equipos Intel · 70 MB.</li>
+                    </ul>
+                    <p class="nota">Si no sabes cuál elegir, usa el botón principal: funciona en casi todos los teléfonos actuales.</p>
+                </details>
+            </div>
+
+            <h3 class="subtitulo">Cómo instalarlo</h3>
+            <ol class="pasos pasos--compactos">
+                <li>
+                    <span class="pasos__numero">1</span>
+                    <p>Descarga el archivo APK con el botón de arriba.</p>
+                </li>
+                <li>
+                    <span class="pasos__numero">2</span>
+                    <p>Ábrelo. Android te pedirá permiso para instalar apps de esta fuente: actívalo y vuelve atrás.</p>
+                </li>
+                <li>
+                    <span class="pasos__numero">3</span>
+                    <p>Pulsa "Instalar" y abre ExoTube. La primera vez tarda unos segundos en prepararse.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="seccion" id="preguntas">
+        <div class="contenedor contenedor--estrecho">
+            <h2>Preguntas frecuentes</h2>
+
+            <details class="pregunta">
+                <summary>¿Por qué no está en Google Play?</summary>
+                <p>Las normas de Google Play no permiten aplicaciones que descarguen contenido de plataformas como YouTube. Por eso ExoTube se instala desde esta página, igual que otras apps de código abierto.</p>
+            </details>
+
+            <details class="pregunta">
+                <summary>¿Es seguro instalar un APK?</summary>
+                <p>Lo es si confías en la fuente. ExoTube es de código abierto: puedes leer todo su código y compilarlo tú mismo. Descárgalo solo desde esta página, ya que un APK modificado por terceros sí puede ser peligroso.</p>
+            </details>
+
+            <details class="pregunta">
+                <summary>¿Qué plataformas admite?</summary>
+                <p>YouTube, TikTok, Instagram, X y Facebook. Si el contenido es privado o requiere iniciar sesión, la app te lo indicará en lugar de fallar sin explicación.</p>
+            </details>
+
+            <details class="pregunta">
+                <summary>¿Dónde se guardan los archivos?</summary>
+                <p>Los videos en "Movies/ExoTube" y la música en "Music/ExoTube". Aparecen en tu galería y en tu reproductor de música habitual, así que puedes usarlos aunque desinstales la app.</p>
+            </details>
+
+            <details class="pregunta">
+                <summary>¿Tiene anuncios o recoge mis datos?</summary>
+                <p>No tiene anuncios ni pide registro. La app guarda un historial de descargas asociado a un identificador anónimo, sin nombre, correo ni teléfono.</p>
+            </details>
+
+            <details class="pregunta">
+                <summary>¿Puedo descargar cualquier video?</summary>
+                <p>Técnicamente sí, pero legalmente no. Descarga solo contenido tuyo, de dominio público o cuyo autor permita la descarga. Consulta el aviso de abajo.</p>
+            </details>
+
+            <div class="aviso">
+                <h3>Aviso legal</h3>
+                <p>ExoTube es una herramienta. El uso que le des es tu responsabilidad: respeta los derechos de autor y los términos de servicio de cada plataforma. No usa ni distribuye contenido de terceros, y no está afiliada a YouTube, TikTok, Instagram, X ni Facebook.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="pie">
+    <div class="contenedor pie__fila">
+        <p class="logo logo--pie">Exo<span class="verde">Tube</span></p>
+        <p class="nota">Software libre bajo licencia GPL-3.0 · <span id="anio">2026</span></p>
+        <p class="nota">Las marcas mencionadas pertenecen a sus respectivos dueños.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

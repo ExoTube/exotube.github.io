@@ -1,0 +1,14 @@
+Aquí van los archivos APK que descargará la gente desde la página.
+
+Nombres que espera index.html:
+
+  ExoTube-1.0-arm64-v8a.apk     <- botón principal (la mayoría de teléfonos)
+  ExoTube-1.0-armeabi-v7a.apk   <- teléfonos antiguos (32 bits)
+  ExoTube-1.0-x86_64.apk        <- emuladores y equipos Intel
+
+Se generan con "./gradlew assembleRelease" en el proyecto Android y aparecen en:
+  app/build/outputs/apk/release/
+
+IMPORTANTE: el APK debe estar FIRMADO. Un APK sin firmar no se puede instalar.
+Si el nombre del archivo termina en "-unsigned.apk", todavía falta crear la clave de firma
+(ver el README del proyecto Android).

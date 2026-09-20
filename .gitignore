@@ -1,0 +1,7 @@
+# Los APK NO van dentro del repositorio: GitHub rechaza archivos de más de 100 MB y estos
+# rondan los 70. Se publican como archivos adjuntos de un "Release" y la página enlaza allí.
+descargas/*.apk
+
+# Basura del sistema
+Thumbs.db
+.DS_Store

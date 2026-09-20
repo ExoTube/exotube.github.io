@@ -1,0 +1,621 @@
+/* ===========================================================
+   ExoTube · Estilos
+   Paleta idéntica a la de la app (ui/theme/Color.kt): verde sobre negro.
+   =========================================================== */
+
+:root {
+    --verde: #2EE67A;
+    --verde-oscuro: #0F3D22;
+    --verde-claro: #A6F5C4;
+    --negro: #000000;
+    --superficie: #0B110D;
+    --superficie-2: #101813;
+    --superficie-3: #16201A;
+    --texto: #E6EEE8;
+    --texto-suave: #9FB3A6;
+    --borde: #26322B;
+
+    --ancho: 1120px;
+    --radio: 16px;
+    --radio-grande: 24px;
+    --transicion: 200ms ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px; /* para que el encabezado fijo no tape los títulos */
+}
+
+body {
+    margin: 0;
+    background: var(--negro);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--verde);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+.verde {
+    color: var(--verde);
+}
+
+.contenedor {
+    width: min(100% - 40px, var(--ancho));
+    margin-inline: auto;
+}
+
+.contenedor--estrecho {
+    width: min(100% - 40px, 760px);
+}
+
+/* --- Accesibilidad: foco siempre visible --- */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--verde);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* ===================== ENCABEZADO ===================== */
+
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borde);
+}
+
+.cabecera__fila {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 72px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+    margin-inline-start: auto;
+}
+
+.nav a {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color var(--transicion);
+}
+
+.nav a:hover {
+    color: var(--verde);
+}
+
+.menu-boton {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.menu-boton span {
+    width: 22px;
+    height: 2px;
+    background: var(--texto);
+    border-radius: 2px;
+}
+
+/* ===================== BOTONES ===================== */
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 26px;
+    background: var(--verde);
+    color: #00210D;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 0;
+    border-radius: 999px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(46, 230, 122, 0.25);
+    text-decoration: none;
+}
+
+.boton svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.boton--pequeno {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+}
+
+.boton--grande {
+    padding: 16px 32px;
+    font-size: 1.05rem;
+}
+
+.boton--fantasma {
+    background: transparent;
+    color: var(--texto);
+    border: 1px solid var(--borde);
+}
+
+.boton--fantasma:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+    box-shadow: none;
+}
+
+/* ===================== PORTADA ===================== */
+
+.portada {
+    padding: 80px 0 64px;
+    /* Resplandor verde muy sutil detrás del contenido. */
+    background:
+        radial-gradient(900px 420px at 15% -10%, rgba(46, 230, 122, 0.16), transparent 70%),
+        var(--negro);
+}
+
+.portada__rejilla {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    background: var(--verde-oscuro);
+    color: var(--verde-claro);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 999px;
+}
+
+.parrafo-grande {
+    max-width: 52ch;
+    color: var(--texto-suave);
+    font-size: 1.15rem;
+}
+
+.portada__botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 28px 0 16px;
+}
+
+.nota {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.insignias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.insignias li {
+    padding: 7px 14px;
+    background: var(--superficie-2);
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+/* --- Imagen de portada --- */
+.portada__imagen img {
+    /* La imagen es vertical y muy alta: la limitamos por altura, no por ancho. */
+    max-height: 640px;
+    width: auto;
+    margin-inline: auto;
+    border-radius: var(--radio-grande);
+    box-shadow: 0 30px 80px rgba(46, 230, 122, 0.14);
+}
+
+/* ===================== SECCIONES ===================== */
+
+.seccion {
+    padding: 80px 0;
+}
+
+.seccion--alterna {
+    background: var(--superficie);
+    border-block: 1px solid var(--borde);
+}
+
+.seccion h2 {
+    text-align: center;
+}
+
+.seccion__intro {
+    max-width: 60ch;
+    margin: 0 auto 48px;
+    color: var(--texto-suave);
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: 56px;
+    text-align: center;
+}
+
+/* --- Tarjetas de características --- */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tarjeta {
+    padding: 28px;
+    background: var(--superficie-2);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-grande);
+    transition: border-color var(--transicion), transform var(--transicion);
+}
+
+.tarjeta:hover {
+    border-color: var(--verde);
+    transform: translateY(-4px);
+}
+
+.tarjeta__icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    background: var(--verde-oscuro);
+    border-radius: 14px;
+}
+
+.tarjeta__icono svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--verde);
+}
+
+.tarjeta p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+
+/* --- Pasos numerados --- */
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: paso;
+}
+
+.pasos li {
+    padding: 28px;
+    background: var(--superficie-2);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-grande);
+}
+
+.pasos__numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+    background: var(--verde);
+    color: #00210D;
+    font-weight: 800;
+    border-radius: 50%;
+}
+
+.pasos p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+
+.pasos--compactos li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+}
+
+.pasos--compactos .pasos__numero {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+/* ===================== DESCARGA ===================== */
+
+.descarga {
+    max-width: 780px;
+    margin-inline: auto;
+    padding: 32px;
+    background: var(--superficie-2);
+    border: 1px solid var(--verde-oscuro);
+    border-radius: var(--radio-grande);
+}
+
+.descarga__principal {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.descarga__principal > div {
+    flex: 1 1 240px;
+}
+
+.descarga__nombre {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.descarga__datos {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.otras {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borde);
+}
+
+.otras summary,
+.pregunta summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+}
+
+.otras summary::after,
+.pregunta summary::after {
+    content: "+";
+    float: right;
+    color: var(--verde);
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.otras[open] summary::after,
+.pregunta[open] summary::after {
+    content: "−";
+}
+
+.otras ul {
+    margin: 16px 0;
+    padding-left: 20px;
+    color: var(--texto-suave);
+}
+
+.otras li {
+    margin-bottom: 8px;
+}
+
+/* ===================== PREGUNTAS ===================== */
+
+.pregunta {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.pregunta p {
+    margin: 12px 0 0;
+    color: var(--texto-suave);
+}
+
+.aviso {
+    margin-top: 40px;
+    padding: 24px;
+    background: var(--superficie-2);
+    border-left: 3px solid var(--verde);
+    border-radius: var(--radio);
+}
+
+.aviso h3 {
+    margin-bottom: 8px;
+}
+
+.aviso p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* ===================== PIE ===================== */
+
+.pie {
+    padding: 48px 0;
+    background: var(--superficie);
+    border-top: 1px solid var(--borde);
+    text-align: center;
+}
+
+.pie__fila > * {
+    margin: 0 0 8px;
+}
+
+.logo--pie {
+    font-size: 1.2rem;
+    font-weight: 800;
+    justify-content: center;
+}
+
+/* ===================== ANIMACIONES ===================== */
+
+.revelar {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.revelar--visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Si el usuario pidió menos animaciones en su sistema, las quitamos. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .revelar {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .boton:hover,
+    .tarjeta:hover {
+        transform: none;
+    }
+}
+
+/* ===================== MÓVIL ===================== */
+
+@media (max-width: 860px) {
+    .portada__rejilla {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .parrafo-grande {
+        margin-inline: auto;
+    }
+
+    .portada__botones,
+    .insignias {
+        justify-content: center;
+    }
+
+    .portada__imagen {
+        order: -1; /* en móvil, la captura va arriba */
+    }
+
+    .menu-boton {
+        display: flex;
+        margin-inline-start: auto;
+    }
+
+    .cabecera .boton--pequeno {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 20px 20px;
+        background: var(--negro);
+        border-bottom: 1px solid var(--borde);
+    }
+
+    .nav--abierto {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--borde);
+    }
+
+    .descarga__principal {
+        justify-content: center;
+        text-align: center;
+    }
+}

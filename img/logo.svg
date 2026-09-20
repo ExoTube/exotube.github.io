@@ -1,0 +1,6 @@
+<!-- Logotipo de ExoTube: anillo verde con el botón de reproducir, igual que el icono de la app. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="ExoTube">
+    <circle cx="54" cy="54" r="52" fill="#000000"/>
+    <circle cx="54" cy="54" r="26" fill="none" stroke="#2EE67A" stroke-width="5"/>
+    <path d="M47 40.5 L68 54 L47 67.5 Z" fill="#2EE67A"/>
+</svg>
