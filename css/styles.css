@@ -363,6 +363,50 @@ summary:focus-visible {
     color: var(--texto-suave);
 }
 
+/* --- Novedades de la versión --- */
+.novedades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.novedades__item {
+    padding: 24px;
+    background: var(--superficie-2);
+    border: 1px solid var(--borde);
+    /* La raya verde de la izquierda las distingue de las tarjetas de características. */
+    border-left: 3px solid var(--verde);
+    border-radius: var(--radio);
+}
+
+.novedades__item h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+}
+
+.novedades__item p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+
+/* Distintivo de las funciones que llegaron con la última versión. */
+.nuevo {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    background: var(--verde-oscuro);
+    color: var(--verde-claro);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    vertical-align: middle;
+}
+
 /* --- Pasos numerados --- */
 .pasos {
     display: grid;

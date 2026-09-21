@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExoTube · Descarga videos y música en Android</title>
-    <meta name="description" content="App gratuita y de código abierto para Android: descarga videos y música de YouTube, TikTok, Instagram, X y Facebook. Sin anuncios y sin registro.">
+    <meta name="description" content="App gratuita y de código abierto para Android: mira videos en línea sin anuncios y descarga videos y música de YouTube, TikTok, Instagram, X y Facebook. Sin registro.">
     <meta name="theme-color" content="#000000">
 
     <!-- Vista previa al compartir el enlace en WhatsApp, X, etc. -->
     <meta property="og:title" content="ExoTube · Descarga videos y música en Android">
-    <meta property="og:description" content="Comparte un enlace desde tus redes y elige la calidad. Sin anuncios, sin registro y de código abierto.">
+    <meta property="og:description" content="Busca y mira videos sin anuncios, o comparte un enlace desde tus redes y elige la calidad. Sin registro y de código abierto.">
     <meta property="og:image" content="img/portada.jpg">
     <meta property="og:type" content="website">
 
@@ -27,6 +27,7 @@
         </a>
 
         <nav class="nav" id="nav" aria-label="Principal">
+            <a href="#novedades">Novedades</a>
             <a href="#caracteristicas">Características</a>
             <a href="#como-funciona">Cómo funciona</a>
             <a href="#descargar">Descargar</a>
@@ -46,11 +47,12 @@
     <section class="portada">
         <div class="contenedor portada__rejilla">
             <div class="portada__texto">
-                <p class="etiqueta">Android · Código abierto</p>
+                <p class="etiqueta">Android · Código abierto · Versión 1.1</p>
                 <h1>Descarga videos y música de tus redes favoritas</h1>
                 <p class="parrafo-grande">
-                    Comparte un enlace desde YouTube, TikTok, Instagram, X o Facebook,
-                    elige la calidad y listo. Sin anuncios, sin registro y sin límites.
+                    Busca y mira videos sin anuncios, o comparte un enlace desde YouTube, TikTok,
+                    Instagram, X o Facebook y descárgalo con la calidad que quieras.
+                    Sin registro y sin límites.
                 </p>
 
                 <div class="portada__botones">
@@ -68,12 +70,44 @@
                     <li>Sin registro</li>
                     <li>Código abierto</li>
                     <li>Reproductor incluido</li>
+                    <li>Videos en línea</li>
                 </ul>
             </div>
 
             <div class="portada__imagen revelar">
                 <img src="img/portada.jpg" alt="Dos pantallas de ExoTube: el detalle de una playlist y el reproductor en marcha" width="760" height="950">
             </div>
+        </div>
+    </section>
+
+    <!-- NOVEDADES -->
+    <section class="seccion seccion--alterna" id="novedades">
+        <div class="contenedor">
+            <h2>Novedades de la 1.1</h2>
+            <p class="seccion__intro">Lo que trae la última versión. Si ya tienes ExoTube, puedes instalarla encima sin perder tus playlists.</p>
+
+            <ul class="novedades">
+                <li class="novedades__item revelar">
+                    <h3>Explorar: videos en línea</h3>
+                    <p>Busca en YouTube y mira los videos dentro de ExoTube, sin publicidad. Con atajos por tema y un modo de ahorro de datos que trae solo el sonido.</p>
+                </li>
+                <li class="novedades__item revelar">
+                    <h3>Bucle y orden aleatorio</h3>
+                    <p>Repite una canción 1 vez, 2 veces o siempre. El número sobre el botón te dice cuántas repeticiones quedan.</p>
+                </li>
+                <li class="novedades__item revelar">
+                    <h3>Buscador en tu biblioteca</h3>
+                    <p>Encuentra cualquier canción por título o artista. No distingue mayúsculas ni tildes: "cancion" encuentra "Canción".</p>
+                </li>
+                <li class="novedades__item revelar">
+                    <h3>Carátulas en tus MP3</h3>
+                    <p>La portada del video queda dentro del archivo y se ve en la app, en la notificación y en cualquier reproductor de música.</p>
+                </li>
+            </ul>
+
+            <p class="nota">
+                <a href="https://github.com/ExoTube/exotube.github.io/releases/tag/v1.1">Ver todos los cambios de la 1.1</a>
+            </p>
         </div>
     </section>
 
@@ -94,6 +128,14 @@
 
                 <li class="tarjeta revelar">
                     <span class="tarjeta__icono">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z"/></svg>
+                    </span>
+                    <h3>Videos en línea <span class="nuevo">Nuevo</span></h3>
+                    <p>Busca y mira videos sin anuncios, sin salir de la app y sin ocupar espacio en el teléfono.</p>
+                </li>
+
+                <li class="tarjeta revelar">
+                    <span class="tarjeta__icono">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
                     </span>
                     <h3>Tú eliges la calidad</h3>
@@ -105,7 +147,7 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
                     </span>
                     <h3>Solo el audio en MP3</h3>
-                    <p>Convierte cualquier video en música para escucharlo sin gastar datos.</p>
+                    <p>Convierte cualquier video en música, con su carátula dentro del archivo.</p>
                 </li>
 
                 <li class="tarjeta revelar">
@@ -113,7 +155,7 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                     </span>
                     <h3>Reproductor integrado</h3>
-                    <p>Escucha con la pantalla apagada, con controles en la notificación.</p>
+                    <p>Escucha con la pantalla apagada, con bucle, orden aleatorio y controles en la notificación.</p>
                 </li>
 
                 <li class="tarjeta revelar">
@@ -224,6 +266,11 @@
             <details class="pregunta">
                 <summary>¿Qué plataformas admite?</summary>
                 <p>YouTube, TikTok, Instagram, X y Facebook. Si el contenido es privado o requiere iniciar sesión, la app te lo indicará en lugar de fallar sin explicación.</p>
+            </details>
+
+            <details class="pregunta">
+                <summary>¿Cómo se ven los videos en línea sin anuncios?</summary>
+                <p>ExoTube le pide el video directamente al servidor, sin pasar por el reproductor de la plataforma, que es donde se insertan los anuncios. Esas direcciones caducan a las pocas horas, así que si algún video falla basta con volver a tocarlo. Necesitas conexión para explorar, pero lo que ya hayas descargado se escucha sin internet.</p>
             </details>
 
             <details class="pregunta">
