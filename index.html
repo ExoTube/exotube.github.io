@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
 
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <link rel="stylesheet" href="css/styles.css?v=1.2">
 </head>
 <body>
 
@@ -43,11 +43,26 @@
 </header>
 
 <main>
+
+    <!-- AVISO DE VERSIÓN NUEVA
+         Va lo primero y fuera de la portada a propósito: está pensado para quien YA tiene
+         ExoTube y entra a la página sin saber que hay versión nueva. Quien llega por primera vez
+         lo lee y no le estorba, porque también le dice qué es lo último. -->
+    <aside class="franja-version">
+        <div class="contenedor franja-version__contenido">
+            <p class="franja-version__texto">
+                <strong>ExoTube 1.2 ya está aquí.</strong>
+                Si ya tienes la 1.1, se instala encima sin perder tus descargas ni tus playlists.
+                Y a partir de esta versión la app te avisa sola cuando haya una nueva.
+            </p>
+            <a class="boton boton--pequeno" href="#descargar">Actualizar</a>
+        </div>
+    </aside>
     <!-- PORTADA -->
     <section class="portada">
         <div class="contenedor portada__rejilla">
             <div class="portada__texto">
-                <p class="etiqueta">Android · Código abierto · Versión 1.1</p>
+                <p class="etiqueta">Android · Código abierto · Versión 1.2</p>
                 <h1>Descarga videos y música de tus redes favoritas</h1>
                 <p class="parrafo-grande">
                     Busca y mira videos sin anuncios, o comparte un enlace desde YouTube, TikTok,
@@ -83,30 +98,30 @@
     <!-- NOVEDADES -->
     <section class="seccion seccion--alterna" id="novedades">
         <div class="contenedor">
-            <h2>Novedades de la 1.1</h2>
+            <h2>Novedades de la 1.2</h2>
             <p class="seccion__intro">Lo que trae la última versión. Si ya tienes ExoTube, puedes instalarla encima sin perder tus playlists.</p>
 
             <ul class="novedades">
                 <li class="novedades__item revelar">
-                    <h3>Explorar: videos en línea</h3>
-                    <p>Busca en YouTube y mira los videos dentro de ExoTube, sin publicidad. Con atajos por tema y un modo de ahorro de datos que trae solo el sonido.</p>
+                    <h3>Videoclips de verdad</h3>
+                    <p>En Explorar ahora se ve el video, no solo se oye el audio, hasta 1080p. Y a pantalla completa en horizontal, tanto en línea como con lo que ya tienes descargado.</p>
                 </li>
                 <li class="novedades__item revelar">
-                    <h3>Bucle y orden aleatorio</h3>
-                    <p>Repite una canción 1 vez, 2 veces o siempre. El número sobre el botón te dice cuántas repeticiones quedan.</p>
+                    <h3>Álbumes</h3>
+                    <p>Pestaña nueva que agrupa tu música por álbum o por artista, sola y sin que tengas que ordenar nada. Lo que no trae álbum etiquetado va a "Randoms".</p>
                 </li>
                 <li class="novedades__item revelar">
-                    <h3>Buscador en tu biblioteca</h3>
-                    <p>Encuentra cualquier canción por título o artista. No distingue mayúsculas ni tildes: "cancion" encuentra "Canción".</p>
+                    <h3>Recortar, renombrar y cambiar la portada</h3>
+                    <p>Quédate con el trozo que quieras de una canción en un archivo aparte, ponle el nombre que tú quieras o cámbiale la portada por una foto tuya. Sin perder calidad.</p>
                 </li>
                 <li class="novedades__item revelar">
-                    <h3>Carátulas en tus MP3</h3>
-                    <p>La portada del video queda dentro del archivo y se ve en la app, en la notificación y en cualquier reproductor de música.</p>
+                    <h3>Se actualiza sola</h3>
+                    <p>A partir de esta versión ExoTube te avisa cuando hay una nueva y la instala desde la propia app. No hace falta volver por aquí.</p>
                 </li>
             </ul>
 
             <p class="nota">
-                <a href="https://github.com/ExoTube/exotube.github.io/releases/tag/v1.1">Ver todos los cambios de la 1.1</a>
+                <a href="https://github.com/ExoTube/exotube.github.io/releases/tag/v1.2">Ver todos los cambios de la 1.2</a>
             </p>
         </div>
     </section>
@@ -211,10 +226,10 @@
                 <div class="descarga__principal">
                     <img src="img/logo.svg" alt="" width="64" height="64">
                     <div>
-                        <p class="descarga__nombre">ExoTube <span id="version">1.1</span></p>
+                        <p class="descarga__nombre">ExoTube <span id="version">1.2</span></p>
                         <p class="descarga__datos">Para la mayoría de teléfonos (ARM64) · <span id="peso-principal">67 MB</span></p>
                     </div>
-                    <a class="boton boton--grande" id="boton-descarga" href="https://github.com/ExoTube/exotube.github.io/releases/download/v1.1/ExoTube-1.1-arm64-v8a.apk">
+                    <a class="boton boton--grande" id="boton-descarga" href="https://github.com/ExoTube/exotube.github.io/releases/download/v1.2/ExoTube-1.2-arm64-v8a.apk">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
                         Descargar APK
                     </a>
@@ -223,8 +238,8 @@
                 <details class="otras">
                     <summary>¿Tu teléfono es antiguo o es un emulador?</summary>
                     <ul>
-                        <li><a href="https://github.com/ExoTube/exotube.github.io/releases/download/v1.1/ExoTube-1.1-armeabi-v7a.apk">ExoTube para ARM de 32 bits (armeabi-v7a)</a> — teléfonos anteriores a 2017 · 61 MB.</li>
-                        <li><a href="https://github.com/ExoTube/exotube.github.io/releases/download/v1.1/ExoTube-1.1-x86_64.apk">ExoTube para x86_64</a> — emuladores y equipos Intel · 70 MB.</li>
+                        <li><a href="https://github.com/ExoTube/exotube.github.io/releases/download/v1.2/ExoTube-1.2-armeabi-v7a.apk">ExoTube para ARM de 32 bits (armeabi-v7a)</a> — teléfonos anteriores a 2017 · 61 MB.</li>
+                        <li><a href="https://github.com/ExoTube/exotube.github.io/releases/download/v1.2/ExoTube-1.2-x86_64.apk">ExoTube para x86_64</a> — emuladores y equipos Intel · 70 MB.</li>
                     </ul>
                     <p class="nota">Si no sabes cuál elegir, usa el botón principal: funciona en casi todos los teléfonos actuales.</p>
                 </details>
@@ -308,6 +323,6 @@
     </div>
 </footer>
 
-<script src="js/main.js?v=1.1"></script>
+<script src="js/main.js?v=1.2"></script>
 </body>
 </html>

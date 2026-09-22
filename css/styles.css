@@ -556,6 +556,44 @@ summary:focus-visible {
     font-size: 0.95rem;
 }
 
+
+/* ===================== FRANJA DE VERSIÓN NUEVA =====================
+   Avisa a quien ya tiene ExoTube instalado de que hay una versión más nueva.
+   Va pegada al encabezado y por encima de la portada: es lo primero que se lee. */
+
+.franja-version {
+    background: var(--verde-oscuro);
+    border-bottom: 1px solid var(--verde);
+}
+
+.franja-version__contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.franja-version__texto {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--texto);
+}
+
+.franja-version__texto strong {
+    color: var(--verde);
+}
+
+/* En el móvil el botón baja debajo del texto en vez de estrujarlo. */
+@media (max-width: 720px) {
+    .franja-version__contenido {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
 /* ===================== PIE ===================== */
 
 .pie {
