@@ -701,3 +701,17 @@ summary:focus-visible {
         text-align: center;
     }
 }
+
+/* Huella de la firma: un texto largo sin espacios que debe partirse en pantallas estrechas. */
+.huella {
+    display: block;
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 0.85em;
+    color: var(--verde-claro);
+    background: var(--superficie-3);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    word-break: break-all;
+}
